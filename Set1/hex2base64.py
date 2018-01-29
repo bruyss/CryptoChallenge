@@ -15,7 +15,8 @@ string_result = "SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29
 
 def hex2base64(hex_string):
     hex_binary = binascii.unhexlify(hex_string)
-    logging.debug(hex_binary)
     base64_result = binascii.b2a_base64(hex_binary, newline=False).decode("utf-8")
-
     return base64_result
+
+
+print(hex2base64(string_test))
